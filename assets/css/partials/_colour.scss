@@ -1,0 +1,71 @@
+$colours: (
+    "yellow": (
+        "base": #fed100,
+        1: #fff9d7,
+        2: #fff4ae,
+        3: #ffee86,
+        4: #ffe335,
+        5: #fed100
+    ),
+    "orange": (
+        "base": #fc9003,
+        1: #ffebcc,
+        2: #ffd699,
+        3: #fec267,
+        4: #ecac2d,
+        5: #fc9003
+    ),
+    "green": (
+        "base": #1aac1e,
+        1: #d1eed2,
+        2: #a3dea5,
+        3: #76cd78,
+        4: #4abc4b,
+        5: #1aac1e,
+        6: #128024,
+        7: #0e5b10
+    ),
+    "red": (
+        "base": #cc0000,
+        1: #f5cccc,
+        2: #eb9999,
+        3: #e06666,
+        4: #ff2828,
+        5: #cc0000,
+        6: #a30000,
+        7: #7a0000
+    ),
+    "blue": (
+        "base": #3c85df,
+        1: #d8e7f9,
+        2: #b1cef2,
+        3: #8ab6ec,
+        4: #67a9f1,
+        5: #3c85df,
+        6: #336dc2,
+        7: #2a5e9d,
+        8: #183559
+    ),
+    "grey": (
+        "base": #b6b6b6,
+        1: #f2f2f2,
+        2: #ebebeb,
+        3: #dcdcdc,
+        4: #b6b6b6,
+        5: #767676,
+        6: #6e6e6e,
+        7: #373737,
+        8: #333333,
+        9: #222222
+    ),
+    "black": (
+        "base": #000000
+    ),
+    "white": (
+        "base": #ffffff
+    )
+);
+
+@function colour($colour, $tone: 'base') {
+    @return map-get(map-get($colours, $colour), $tone);
+}

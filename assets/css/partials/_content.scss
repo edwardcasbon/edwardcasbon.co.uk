@@ -1,0 +1,19 @@
+section {
+
+    .article {
+        padding: 20px 40px;
+    }
+
+    @include responsive('tablet') {
+        width: 90%;
+        float: left;
+
+        .container {
+            max-width: 600px;
+        }
+    }
+
+    @include responsive('desktop') {
+        width: 67%;
+    }
+}

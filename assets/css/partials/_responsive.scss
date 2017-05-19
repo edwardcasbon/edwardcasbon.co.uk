@@ -1,0 +1,15 @@
+@mixin responsive($breakpoint) {
+    @if map-has-key($breakpoints, $breakpoint) {
+        $width: map-get($breakpoints, $breakpoint);
+        $declaration: "(min-width: #{$width})";
+        @media only screen and #{$declaration} {
+            @content;
+        }
+    }
+}
+
+$breakpoints: (
+    "mobile": 0px,
+    "tablet": 480px,
+    "desktop": 768px,
+);
