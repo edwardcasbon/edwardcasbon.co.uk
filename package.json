@@ -1,0 +1,26 @@
+{
+  "name": "edwardcasbon.co.uk",
+  "version": "1.0.0",
+  "description": "Personal website",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass assets/css/styles.scss assets/css/styles.css --output-style compressed --include-path assets/css/partials",
+    "autoprefixer": "node node_modules/postcss-cli/bin/postcss --no-map true --use autoprefixer -c assets/css -r assets/css/styles.css",
+    "build": "npm run sass && npm run autoprefixer"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/edwardcasbon/edwardcasbon.co.uk.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/edwardcasbon/edwardcasbon.co.uk/issues"
+  },
+  "homepage": "https://github.com/edwardcasbon/edwardcasbon.co.uk#readme",
+  "devDependencies": {
+    "autoprefixer": "^7.1.1",
+    "node-sass": "^4.5.3",
+    "postcss-cli": "^4.0.0"
+  }
+}
